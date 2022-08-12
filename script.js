@@ -1,35 +1,52 @@
 const homeScoreDisplay = document.getElementById('home-score');
 const awayScoreDisplay = document.getElementById('guest-score');
+const plusOneH = document.querySelector('#plusOneH');
+const plusTwoH = document.querySelector('#plusTwoH');
+const plusThreeH = document.querySelector('#plusThreeH');
+const plusOneA = document.querySelector('#plusOneA');
+const plusTwoA = document.querySelector('#plusTwoA');
+const plusThreeA = document.querySelector('#plusThreeA');
 
 let homeScore = 0;
 let awayScore = 0;
 
 function addOneHome() {
-  const addScoreBy1 = (homeScore += 1);
-  homeScoreDisplay.textContent = addScoreBy1;
+  plusOneH.addEventListener('click', () => {
+    homeScoreDisplay.textContent = homeScore += 1;
+  });
 }
 
 function addTwoHome() {
-  const addScoreBy2 = (homeScore += 2);
-  homeScoreDisplay.textContent = addScoreBy2;
+  plusTwoH.addEventListener('click', () => {
+    homeScoreDisplay.textContent = homeScore += 2;
+  });
 }
-
 function addThreeHome() {
-  const addScoreBy3 = (homeScore += 3);
-  homeScoreDisplay.textContent = addScoreBy3;
+  plusThreeH.addEventListener('click', () => {
+    homeScoreDisplay.textContent = homeScore += 3;
+  });
 }
 
 function addOneAway() {
-  const addScoreBy1 = (awayScore += 1);
-  awayScoreDisplay.textContent = addScoreBy1;
+  plusOneA.addEventListener('click', () => {
+    awayScoreDisplay.textContent = awayScore += 1;
+  });
 }
 
 function addTwoAway() {
-  const addScoreBy2 = (awayScore += 2);
-  awayScoreDisplay.textContent = addScoreBy2;
+  plusTwoA.addEventListener('click', () => {
+    awayScoreDisplay.textContent = awayScore += 2;
+  });
+}
+function addThreeAway() {
+  plusThreeA.addEventListener('click', () => {
+    awayScoreDisplay.textContent = awayScore += 3;
+  });
 }
 
-function addThreeAway() {
-  const addScoreBy3 = (awayScore += 3);
-  awayScoreDisplay.textContent = addScoreBy3;
-}
+addOneHome();
+addTwoHome();
+addThreeHome();
+addOneAway();
+addTwoAway();
+addThreeAway();
